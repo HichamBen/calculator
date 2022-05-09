@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(184, 252, 248), rgb(244, 255, 252));
+    background-image: -moz-linear-gradient(to right, rgb(184, 252, 248), rgb(244, 255, 252));
+
+}
+
+header {
+    background-color: rgba(0, 0, 0);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+}
+
+main {
+    width: 450px;
+    margin: 25px auto;
+    padding: 15px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 70px 250px;
+    grid-row-gap: 15px;
+    border: 1px solid grey;
+}
+
+#display {
+    padding: 15px;
+    font-size: 32px;
+    text-align: right;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+
+.board {
+    display: grid;
+    grid-template-areas: "operators operators operators operators"
+        "numbers numbers numbers equal"
+        "numbers numbers numbers equal"
+        "numbers numbers numbers equal";
+    grid-gap: 10px;
+    pointer-events: none;
+}
+
+.operators {
+    grid-area: operators;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 10px;
+
+}
+
+.numbers {
+    grid-area: numbers;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+
+}
+
+#equal {
+    grid-area: equal;
+    background-color: rgb(45, 135, 187);
+    color: white;
+}
+
+button {
+    font-size: 18px;
+    background-color: rgb(209, 207, 207);
+    border: 1px solid gainsboro;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.numbers>button {
+    background-color: whitesmoke;
+}
+
+button:hover {
+    border-color: black;
+
+}
